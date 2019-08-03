@@ -1,0 +1,45 @@
+Instalando o NodeJs e NPM utilizando o NVM
+    # Atualizar os pacotes
+        $ sudo apt-get update
+    # Bibliotecas necessárias
+        $ sudo apt-get install build-essential libssl-dev
+    # Script de instalação no NVM
+        $ curl –sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+    # Procurar o arquivo .sh e instalar o NVM
+        $ bash install_nvm.sh
+    # Reiniciar o terminal (fechando e abrindo novamente)
+    # Verificar as versões do NodeJs
+        $ nvm ls-remote
+    # Escolha a versão do NodeJs e execute 
+        $ nvm install 6.11.0
+    # Testar se realmente foram instalados
+        $ node –v
+        $ npm –v
+
+## ---- Conceitos importantes ---- ##
+
+NPM
+    - Gerenciador de pacotes/dependências Javascript... Todos os pacotes abaixo serão instalados através do NPM
+    # iniciando um projeto node
+        $ npm init
+
+Express
+    - Framework NodeJs para aplicações web
+    - Implementa uma API de diversos métodos pra mais fácil manipulação de funções NodeJs pra controle de rotas, middlewares, módulos de requisição e resposta
+    # Instalar o Express (criando a pasta node_modules)
+        $ npm install express -save
+
+EJS
+    - Linguagem de modelagem pra gerar páginas HTML com o uso de JavaScript
+    # Instalar o EJS (com os arquivos disponiveis no projeto)
+        $ npm install ejs --save
+    # Incorporar o EJS no projeto (no código)
+        app.set('view engines, 'ejs');
+
+Nodemon
+    - Utilitário que reinicia automaticamente o servidor NodeJs, assim que qualquer arquivo é modificado, assim não é necessário ficar reiniciando o servido manualmente
+    # Instalando o Nodemon (globalmente)
+        $ sudo su
+        $ npm install -g nodemon
+    # Executar o app 
+        $ nodemon app.js
